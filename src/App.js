@@ -8,7 +8,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      random: 0
+      random: 'Bạn đã sẵn sàng'
     }
   }
   onClick() {
