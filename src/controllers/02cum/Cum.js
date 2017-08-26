@@ -35,7 +35,11 @@ export default class Cum extends Component {
     if (event.target.value % 1 != 0) {
       this.setState({input: false})
     } else {
-      this.setState({indexTo: event.target.value, input: true})
+      if (event.target.value.length == 0) {
+        this.setState({indexTo: 0, input: true})
+      } else {
+        this.setState({indexTo: event.target.value, input: true})
+      }
     }
   }
   onChangeFrom(event){
@@ -48,7 +52,11 @@ export default class Cum extends Component {
     if (event.target.value % 1 != 0) {
       this.setState({input: false})
     } else {
-      this.setState({indexFrom: event.target.value, input: true})
+      if (event.target.value.length == 0) {
+        this.setState({indexFrom: 99, input: true})
+      } else {
+        this.setState({indexFrom: event.target.value, input: true})
+      }
     }
   }
   onNext(){
