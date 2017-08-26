@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-import { View, GLOBAL, Text, Button, Data } from './components'
+import { View, GLOBAL, Text, Button, Data } from '../../components'
 
-class App extends Component {
+export default class Random extends Component {
   constructor() {
     super()
     this.state = {
@@ -37,11 +35,15 @@ class App extends Component {
           style={{backgroundColor: '#F4A460', padding: 10, marginTop: 20, width: 150}}
           onClick={this.onResult.bind(this)}
         >
-          RESULT
+          CHECK
+        </Button>
+        <Button
+          style={{backgroundColor: '#F4A460', padding: 10, marginTop: 20, width: 150}}
+          onClick={this.props.onBack.bind(this)}
+        >
+          BACK
         </Button>
       </View>
     );
   }
 }
-
-export default App;
