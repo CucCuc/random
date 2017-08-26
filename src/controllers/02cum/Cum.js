@@ -71,19 +71,19 @@ export default class Cum extends Component {
           <Text>TO:</Text>
           <TextInput
             placeholder='0'
-            style={{width: 100, marginLeft: 20, marginRight: 20, padding: 5}}
+            style={{width: 50, marginLeft: 10, marginRight: 10, padding: 5}}
             onChange={this.onChangeTo.bind(this)}
           />
           <Text>FROM:</Text>
           <TextInput
             placeholder='99'
-            style={{width: 100, marginLeft: 20, padding: 5}}
+            style={{width: 50, marginLeft: 10, padding: 5}}
             onChange={this.onChangeFrom.bind(this)}
           />
 
         </View>
-        <Text style={{margin: 20, color: 'green'}}>{!this.state.input ? 'HÃY NHẬP SỐ' : this.state.inputNum && 'To > From'}</Text>
-        <Text style={{marginBottom: 20, fontSize: 150}}>{this.state.random}</Text>
+        <Text style={{margin: 10, color: 'green'}}>{!this.state.input ? 'HÃY NHẬP SỐ' : this.state.inputNum && 'To > from'}</Text>
+        <Text style={{marginBottom: 10, fontSize: 150}}>{this.state.random}</Text>
         <Text style={{marginBottom: 50, color: '#FFFF33'}}>{this.state.result ? Data[this.state.random].toUpperCase() : 'Gắng nhớ trước khi xem kết quả'}</Text>
         <Button
           style={button}
@@ -99,7 +99,7 @@ export default class Cum extends Component {
             PREVI
           </Button>
           <Button
-            style={{...button, marginLeft: 20}}
+            style={{...button, marginLeft: 10}}
             onClick={this.onNext.bind(this)}
           >
             NEXT
@@ -124,8 +124,8 @@ export default class Cum extends Component {
 const styles = {
   button: {
     backgroundColor: '#F4A460',
-    padding: 10,
-    marginTop: 20,
+    padding: 5,
+    marginTop: 10,
     width: 150
   }
 }
