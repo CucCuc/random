@@ -10,7 +10,7 @@ export default class Cum extends Component {
       indexTo: 1,
       indexFrom: 99,
       input: true,
-      result: false,
+      result: true,
       inputNum: true
     }
   }
@@ -22,7 +22,7 @@ export default class Cum extends Component {
     }
     let random = Math.floor(Math.random() * 100) % (indexFrom - indexTo) + indexTo
     console.log('random', random);
-    this.setState({random, result: false})
+    this.setState({random, result: true})
   }
   onResult(){
     this.setState({result: true})
@@ -63,13 +63,13 @@ export default class Cum extends Component {
     if (this.state.random == 99) {
       return
     }
-    this.setState({random: this.state.random + 1, result: false})
+    this.setState({random: this.state.random + 1, result: true})
   }
   onPrevi(){
     if (this.state.random == 0) {
       return
     }
-    this.setState({random: this.state.random - 1, result: false})
+    this.setState({random: this.state.random - 1, result: true})
   }
   render() {
     const { button } = styles;
